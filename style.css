@@ -3,7 +3,7 @@
 	width: 200px;
     display: flex;
     border: red solid;
-   
+   overflow-x:hidden;
     position: relative;
 
 }
@@ -33,4 +33,5 @@
 
 .init{
     display: flex;
+    transition: 500ms;
 }
