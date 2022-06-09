@@ -5,11 +5,12 @@ var all_img = document.querySelectorAll( ".img_gif" )
 
 
 
-
+//variable  qui permet de changer dynamiquement la propriété translate en css
 var val = 0
+// variable qui contrôle la position de l'action
 var count = 0
 
-
+//évènement sur le bouton de droite,val prend la "width" de l'image à chaque clique, count s'incrémente de 1 , si count est égale au nombre total d'image au clique effectue un slide en sens inverse qui est égale à la taille de l'image fois le nombre d'image.
 
 $( btn_right ).click( function () {
     val -= 200
@@ -22,4 +23,14 @@ $( btn_right ).click( function () {
     }
 } )
 
-
+//voir précédent commentaire, même principe
+$( btn_left ).click( function () {
+    val += 200
+    init.style.transform = "translate(" + val + "px)"
+    count -= 1
+    if ( count == -1 ) {
+        val -= 200 * all_img.length
+        init.style.transform = "translate(" + val + "px)"
+        count = all_img.length - 1
+    }
+} )

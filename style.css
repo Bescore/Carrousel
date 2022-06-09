@@ -1,37 +1,34 @@
 .container {
+	border-radius: 5%;
 	margin: 100px auto;
 	width: 200px;
-    display: flex;
-    border: red solid;
-   overflow-x:hidden;
-    position: relative;
-
+	display: flex;
+	overflow-x: hidden;
+	position: relative;
 }
 
-.round-left{
-    border-radius: 50% ;
-    width: 20px;
-    aspect-ratio: 1/1;
-    border: 2px solid;
-    background-color: green;
-    position:absolute;
-    z-index: 2;
-    top:50%;
-    right:left;
+.round-left {
+	aspect-ratio: 1/1;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 10px;
 }
-.round-right{
-    border-radius: 50% ;
-    width: 20px;
-    aspect-ratio: 1/1;
-    border: 2px solid;
-    background-color: green;
-    z-index: 2;
-    position:absolute;
-    top:50%;
-    right:0
+.round-right {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	right: 10px;
 }
-
-.init{
-    display: flex;
-    transition: 500ms;
+.chev {
+	color: rgb(208, 216, 196);
+	cursor: pointer;
+	transform: scale(1.5);
+}
+.chev:hover {
+	transform: scale(2);
+}
+.init {
+	display: flex;
+	transition: 500ms;
 }
